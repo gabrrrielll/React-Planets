@@ -78,40 +78,10 @@ const planets = [
 
 // 3: Render the container component to the DOM
 
-const Planet = (props) => {
-  return (
-    <div className="card">
-          <div>
-            <img src={props.url} alt={props.name}></img>
-          </div>
-          <h2>{ props.name}</h2>
-          <p>{props.desc}</p>
-          <h3>Planet Profile</h3>
-          <ul>
-            <li><strong>Diameter:</strong> {props.diameter} mi</li>
-            <li><strong>Moons:</strong> {props.moons}</li>
-          </ul>
-    </div>
-  );
-};
 
-const App = (props) => {
-  return (
-      <div className="container">
-        { props.planets.map(function(planet) {
-          return (<Planet  name={planet.name}
-                          url={planet.url}
-                          desc={planet.desc}
-                          diameter={ planet.diameter }
-                          moons={planet.moons}
-                          key={planet.id.toString() } />);
-        }) }
-      </div>
-  );
-};
 
 
 ReactDOM.render(
-  <App planets={ planets } />,
+  <App />,
   document.getElementById('root')
 );
