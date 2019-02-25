@@ -78,7 +78,34 @@ const planets = [
 
 // 3: Render the container component to the DOM
 
+const Planet = ({ url, name, desc, diameter, moons }) => {
 
+  return (
+    <div className="card">
+          <div>
+            <img src={ url } alt={ name}></img>
+          </div>
+          <h2>{  name}</h2>
+          <p>{ desc}</p>
+          <h3>Planet Profile</h3>
+          <ul>
+            <li><strong>Diameter:</strong> { diameter} </li>
+            <li><strong>Moons:</strong> { moons}</li>
+          </ul>
+    </div>
+  );
+};
+
+const App = (props) => {
+  return (
+      <div className="container">
+        { props.planets.map(function(planet) {
+          return (<Planet  {...planet}
+                          key={planet.id.toString() } />);
+        }) }
+      </div>
+  );
+};
 
 
 ReactDOM.render(
