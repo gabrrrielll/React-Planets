@@ -1,4 +1,2 @@
 # React-Planets
-
-
-See live [Planets](https://gabrrrielll.github.io/React-Planets/)
+See live the project [Planets](https://gabrrrielll.github.io/React-Planets/)
