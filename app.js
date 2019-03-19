@@ -64,7 +64,8 @@ const planets = [
     url: 'img/neptune.jpg'
   },
 ];
-=============================================================
+
+
 
 // 1: Create a 'Planet' component that renders a planet card
 const Planet = (props) => {
